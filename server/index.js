@@ -16,7 +16,7 @@ app.get('/parse-pdf', (req, res) => {
     let options = {
         pagerender: function(pageData) { 
             let render_options = {
-                normalizeWhitespace: true,
+                normalizeWhitespace: false,
                 disableCombineTextItems: false
             };
             return pageData.getTextContent(render_options)
